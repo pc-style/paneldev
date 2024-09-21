@@ -1,0 +1,30 @@
+:root {
+  --text-color: #ccc;
+  --text-color-2: rgb(131, 131, 131);
+  --text-color-red: rgb(255, 86, 86);
+  --text-color-orange: #ff954f;
+  --text-color-blue: #5ea9ff;
+  --text-color-green: #7dff5d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(rgb(68, 51, 88), rgb(35, 35, 46));
+  width: 100vw;
+  height: 100vh;
+}
+
+.split {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */

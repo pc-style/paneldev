@@ -1,0 +1,48 @@
+@use 'options';
+
+.account-navbar > div:nth-child(1) {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        height: max-content;
+    }
+
+    .account-navbar > div:nth-child(1) {
+        visibility: visible;
+    }
+    .server-navbar, .server-navbar > * {
+        visibility: collapse !important;
+        width: 0 !important;
+    }
+
+    .window {
+        flex-direction: column !important;
+
+        .content {
+            height: 50vh;
+        }
+
+        .split {
+            width: calc(100% - 20px);
+            display: flex;
+            flex-direction: column !important;
+        }
+
+        .stats {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .stat {
+            width: 100%;
+            flex-direction: row !important;
+
+            .split {
+                width: 100%;
+                flex-direction: row !important;
+            }
+        }
+    }
+}

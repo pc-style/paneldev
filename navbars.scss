@@ -1,0 +1,135 @@
+// IMPORTS
+@use 'options';
+
+// VARIABLES
+$navbar-spacing: 10px;
+$navbar-icon-size: 30px;
+$navbar-icon-spacing: 2px;
+$navbar-minsize-fix: 10px;
+
+// STYLES
+.hostingName {
+    color: options.$text-color;
+    // width: 22%;
+    // margin-left: -8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // line-height: 1;
+    height: 60px;
+    padding: $navbar-spacing;
+    margin-top: 4px;
+
+    span {
+        font-size: medium !important;
+        line-height: 0;
+    }
+}
+
+.vertical-split {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.account-navbar {
+    width: calc(100% - $navbar-spacing*2);
+    height: 60px;
+    background: options.$background-light;
+    padding: $navbar-spacing;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        // width: 100%;
+        align-content: flex-end;
+
+        span {
+            font-size: $navbar-icon-size;
+            margin: 0 calc($navbar-icon-spacing/2) 0 calc($navbar-icon-spacing/2);
+            color: options.$text-color;
+        }
+
+        .option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
+            color: white;
+        }
+    }
+}
+
+.server-navbar {
+    width: 22%;
+    min-width: min-content;
+    // padding-right: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: options.$background-light;
+
+    .server-options {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .server-status {
+        justify-content: center;
+        color: options.$defaults-serverstatus !important;
+        font-weight: bolder !important;
+        background: options.$background-contrast;
+        height: 60px !important;
+        // border-left: 5px solid options.$defaults-serverstatus;
+        box-shadow: inset 20px 0 10px -10px options.$defaults-serverstatus;
+        flex-direction: column;
+        line-height: 0.2;
+
+
+        &:hover {
+            background: options.$background-contrast !important;
+        }
+
+        &>div {
+            color: options.$text-color;
+            font-weight: lighter !important;
+            font-size: 12px;
+            margin-bottom: -17px;
+        }
+    }
+
+    .server-status,
+    .server-options>div {
+
+        height: 50px;
+        color: options.$text-color;
+        display: flex;
+        align-items: center;
+        transition: options.$animations-speed;
+        padding: 0 $navbar-minsize-fix;
+
+        * {
+            padding: 10px;
+        }
+
+        &:hover, &.active {
+            background-color: options.$background-hover;
+            color: white;
+        }
+
+        text-wrap: nowrap;
+    }
+
+    // .active {
+    //     // border-left: 5px solid options.$defaults-activecolor;
+    //     // box-shadow: inset 15px 0 10px -10px options.$defaults-activecolor;
+    // }
+
+    .end {
+        margin-top: auto;
+    }
+}

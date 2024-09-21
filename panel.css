@@ -1,0 +1,124 @@
+.window .split {
+  display: flex;
+}
+
+.console {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 20px);
+  background: rgb(16, 16, 20);
+  margin: 10px;
+  border-radius: 10px;
+}
+.console .content {
+  height: 100%;
+  width: 100%;
+}
+.console .input {
+  height: 30px;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: none;
+  border: none;
+  outline: none;
+  color: #ccc;
+  padding: 10px;
+  font-size: 20px;
+}
+.console .content {
+  padding: 10px;
+  color: rgba(204, 204, 204, 0.5);
+  overflow-y: scroll;
+}
+
+.stats {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #ccc;
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+.stats .stat {
+  display: flex;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #3b384e;
+  font-size: 20px;
+  font-weight: 1000;
+  text-wrap: nowrap;
+}
+.stats .stat .progressbar {
+  margin-top: 10px;
+  width: 100%;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+.stats .stat .progressbar .progress {
+  transition: 0.7s;
+  width: 0%;
+  height: 100%;
+  background: rgb(182, 255, 140);
+  border-radius: 10px;
+}
+.stats .stat .split {
+  display: flex;
+  height: 100% !important;
+  width: 100% !important;
+  align-items: center;
+  justify-content: center;
+}
+.stats .stat .split span {
+  font-size: 40px;
+  padding: 0 15px 0 5px;
+}
+.stats .stat .split div {
+  width: 100%;
+}
+.stats .stat .split .button:nth-child(1) > span {
+  background: #a5ff8f;
+  border: 3px solid #a5ff8f !important;
+}
+.stats .stat .split .button:nth-child(2) > span {
+  background: #ff954f;
+  border: 3px solid #ff954f !important;
+}
+.stats .stat .split .button:nth-child(3) > span {
+  background: #ff4c5b;
+  border: 3px solid #ff4c5b !important;
+}
+.stats .stat .split .button:nth-child(1) > span.disabled {
+  background: #3b384e !important;
+  color: #a5ff8f !important;
+}
+.stats .stat .split .button:nth-child(2) > span.disabled {
+  background: #3b384e !important;
+  color: #ff954f !important;
+}
+.stats .stat .split .button:nth-child(3) > span.disabled {
+  background: #3b384e !important;
+  color: #ff4c5b !important;
+}
+.stats .stat .split .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stats .stat .split .button span {
+  cursor: pointer;
+  padding: 8px;
+  color: rgb(43, 39, 56);
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.stats .stat .split .button span.disabled {
+  cursor: no-drop;
+  filter: none !important;
+}
+.stats .stat .split .button span:hover {
+  filter: brightness(1.2);
+}/*# sourceMappingURL=panel.css.map */

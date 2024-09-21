@@ -1,0 +1,41 @@
+.account-navbar > div:nth-child(1) {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .account-navbar > div:nth-child(1) {
+    visibility: visible;
+  }
+  .server-navbar, .server-navbar > * {
+    visibility: collapse !important;
+    width: 0 !important;
+  }
+  .window {
+    flex-direction: column !important;
+  }
+  .window .content {
+    height: 50vh;
+  }
+  .window .split {
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column !important;
+  }
+  .window .stats {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .window .stat {
+    width: 100%;
+    flex-direction: row !important;
+  }
+  .window .stat .split {
+    width: 100%;
+    flex-direction: row !important;
+  }
+}/*# sourceMappingURL=renderer.css.map */
