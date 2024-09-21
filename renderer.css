@@ -34,8 +34,25 @@
     width: 100%;
     flex-direction: row !important;
   }
-  .window .stat .split {
+.window .stat .split {
     width: 100%;
     flex-direction: row !important;
-  }
+}
+
+/* Additional Media Queries for responsiveness */
+@media (max-width: 480px) {
+    .window .content {
+        height: 40vh;
+    }
+
+    .window .stat {
+        width: 100%;
+        flex-direction: column !important;
+    }
+
+    .window .stat .split {
+        width: 100%;
+        flex-direction: column !important;
+    }
+}
 }/*# sourceMappingURL=renderer.css.map */

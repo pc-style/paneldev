@@ -96,8 +96,36 @@
   color: #a5ff8f !important;
 }
 .stats .stat .split .button:nth-child(2) > span.disabled {
-  background: #3b384e !important;
-  color: #ff954f !important;
+    background: #3b384e !important;
+    color: #ff954f !important;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .console {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+    }
+
+    .stats {
+        width: 100%;
+        height: auto;
+    }
+
+    .stats .stat {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .stats .stat .split {
+        flex-direction: column;
+    }
+
+    .stats .stat .split span {
+        font-size: 20px;
+        padding: 0 5px 0 2px;
+    }
 }
 .stats .stat .split .button:nth-child(3) > span.disabled {
   background: #3b384e !important;

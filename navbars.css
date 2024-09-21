@@ -95,8 +95,31 @@
 .server-navbar .server-status:hover, .server-navbar .server-status.active,
 .server-navbar .server-options > div:hover,
 .server-navbar .server-options > div.active {
-  background-color: #3b384e;
-  color: white;
+    background-color: #3b384e;
+    color: white;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .account-navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .server-navbar {
+        width: 100%;
+        height: auto;
+    }
+
+    .server-navbar .server-options {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .server-navbar .server-status,
+    .server-navbar .server-options > div {
+        width: 100%;
+    }
 }
 .server-navbar .end {
   margin-top: auto;

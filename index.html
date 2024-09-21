@@ -26,7 +26,7 @@
             </div>
 
             <div class="server-options">
-                <div class="dashboard active" onclick="loadContent('panel_sterowania.html')"><span class="material-symbols-outlined">dns</span> Panel Sterowania</div>
+                <div class="dashboard active" onclick="refreshSite()"><span class="material-symbols-outlined">dns</span> Panel Sterowania</div>
                 <div class="dashboard" onclick="loadContent('settings.html')"><span class="material-symbols-outlined">settings</span> Ustawienia</div>
                 <div class="dashboard" onclick="loadContent('gracze.html')"><span class="material-symbols-outlined">group</span> Gracze</div>
                 <div class="dashboard" onclick="loadContent('swiaty.html')"><span class="material-symbols-outlined">public</span> Światy</div>
@@ -87,6 +87,11 @@
 
     <script src="genStats.js"></script>
     <script>
+        function refreshSite() {
+            //refresh site
+            location.reload();
+        }
+
         function loadContent(file) {
             fetch(file)
                 .then(response => response.text())
